@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="all-content">
+        <h2 class="title">Thư Ứng Tuyển</h2>
+        <div class="content">
+            <p>Hôm nay <span id="current_date"></span>, <span class="red">Quang Duy (a.k.a Hà Nội)</span> muốn được ứng tuyển vào vị trí <b>"Grab-er (Full-time)"</b> <span class="red">Nhật Hạ (a.k.a Sài Gòn)</span></p>
+            <p><b>Ưu điểm:</b></p>
+            <ul>
+                <li>Tận tâm, nhiệt huyết.</li>
+                <li>Thấu hiểu tâm lý khách hàng (lâu lâu hơi lag một xíu, có thể bỏ qua được).</li>
+                <li>Chỉ "chạy" cho mình <span class="red">Sài Gòn.</span></li>
+                <li>To be continued...</li>
+            </ul>
+
+            <p><span class="red">Hà Nội</span> xin hứa sẽ thực hiện tốt mọi yêu cầu và nhiệm vụ mà <span class="red">Sài Gòn.</span> đã đề ra.</p>
+        </div>
+        <div class="agreement" id="continued-button">
+            <div class="button continued-button" onclick="continued()">
+                Click vào đây để tiếp tục
+            </div>
+        </div>
+
+        <div class="agreement-content" id="list-button">
+                <div class="button-content agreement" id="agreement" onclick="agreement()">
+                    Duyệt
+                </div>
+
+                <div class="button-content disagreement" id="disagreement" onclick="disagreement()">
+                    Khum Được Duyệt
+                </div>
+        </div>
+    </div>
+    </iframe> 
+</body>
+<!-- <div id="current_date"></p> -->
+<script>
+    date = new Date();
+    year = date.getFullYear();
+    month = date.getMonth() + 1;
+    day = date.getDate();
+    document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
+</script>
+
+<script>
+    function continued (){
+        document.getElementById("list-button").style.display= "flex";
+        document.getElementById("continued-button").style.display= "none";
+    }
+
+    function agreement(){
+        alert("Duyệt- Ứng viên Hà Nội đã được nhận");
+    }
+
+    function disagreement(){
+        alert("Ét ô éc- Chức năng này hiện tại chưa dùng được, mời bạn thử lại sau");
+        document.getElementById("disagreement").style.display= "none";
+    }
+</script>
+
+</html>

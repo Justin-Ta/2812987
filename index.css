@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    background: url("./access/image/blue.webp");
+    text-align: center;
+}
+.red{
+    color: red;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 17px;
+}
+
+div, p {
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-fill-mode: backwards;
+}
+
+.all-content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 28px;
+}
+
+
+.title{
+    animation-delay: 0.5s;
+}
+
+.content{
+    text-align: left;
+}
+
+.agreement{
+    display: flex;
+    justify-content: center;
+}
+
+.agreement-content{
+    margin-top: 28px;;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button{
+    width: 280px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-content{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: wheat;
+    cursor: pointer;
+}
+
+.continued-button{
+    background: #B1D8B7;
+}
+.agreement-content .agreement{
+    background: blue;
+}
+
+.agreement-content .disagreement{
+    background: red;
+}
+
+#list-button{
+    display: none;
+}
+
+@keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
